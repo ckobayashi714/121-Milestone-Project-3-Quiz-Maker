@@ -21,8 +21,8 @@ public:
 };
 question create_question();
 
-void display_questions(question qArray, int size);
+void display_questions(question qArray[], int size);
 
-void save_questions(question qArray, int size, string filename);
+void save_questions(question qArray[], int size, string filename);
 
 #endif

@@ -9,13 +9,12 @@ int main() {
   /* This will create an array of 100 question objects*/
   question q;
   question qArray[100];
-
   /* This program will reapteadly ask the user to input a question or exit. If
   the user inputs something other than a or b (capital letters too), they will
   be notified with an invalid message, but will then be asked again what option
   they would like to choose.*/
   char choice;
-  int i = 0;
+  int size = 0;
   cout << "Welcome to QuizMaker\n";
 
   do {
@@ -32,19 +31,20 @@ int main() {
     case 'a':
     case 'A':
       cout << "\n";
-      qArray[i++] = create_question();
+      qArray[size] = create_question();
+      cout << qArray[size].text();
+      cout << qArray[size].answer();
+      size++;
       break;
     case 'b':
     case 'B':
-      display_questions(qArray, qArray[i]);
+      display_questions(qArray, size);
       break;
     case 'c':
     case 'C':
-      cout << "What filename would you like to use?";
-      string filename;
+      cout << "\nWhat filename would you like to use?";
       getline(cin, filename);
-      save_questions(qArray, 100, filename);
-      cout << "File saved successfully!";
+      save_questions(qArray, size, filename);
       break;
     case 'd':
     case 'D':
@@ -52,7 +52,7 @@ int main() {
     default:
       cout << "\nInvalid option\n";
     }
-  } while (choice != 'b' && choice != 'B');
+  } while (choice != 'd' && choice != 'D');
   cout << "\nThank you for using QuizMaker!\n";
   return 0;
 }

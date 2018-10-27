@@ -1,148 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="14" failures="6" disabled="0" errors="0" timestamp="2018-10-26T14:27:10" time="0.049" name="AllTests">
-  <testsuite name="Quiz" tests="14" failures="6" disabled="0" errors="0" time="0.049">
+<testsuites tests="14" failures="4" disabled="0" errors="0" timestamp="2018-10-26T21:47:27" time="0.073" name="AllTests">
+  <testsuite name="Quiz" tests="14" failures="4" disabled="0" errors="0" time="0.073">
     <testcase name="PublicMethodsPresent" status="run" time="0" classname="Quiz" />
-    <testcase name="MutatorsAndAccessors" status="run" time="0" classname="Quiz" />
-    <testcase name="CreateQuestion" status="run" time="0.001" classname="Quiz" />
-    <testcase name="SaveQuestion" status="run" time="0.005" classname="Quiz" />
-    <testcase name="SaveFileFormat" status="run" time="0.005" classname="Quiz" />
-    <testcase name="DisplayQuestions" status="run" time="0" classname="Quiz">
-      <failure message="test/unittest.cpp:132&#x0A;      Expected: output&#x0A;      Which is: &quot;Question and Answer list\n1. qnErBvdfaN\nAnswer: JxOvbr292B\n2. g1DuPauaIo\nAnswer: BlxmOdr1Ex\n&quot;&#x0A;To be equal to: expected&#x0A;      Which is: &quot;Question and Answer list\n1. qnErBvdfaN\nAnswer: JxOvbr292B\n2. g1DuPauaIo\nAnswer: BlxmOdr1Ex\n\n&quot;&#x0A;With diff:&#x0A;@@ -3,3 +3,4 @@&#x0A; Answer: JxOvbr292B&#x0A; 2. g1DuPauaIo&#x0A;-Answer: BlxmOdr1Ex\n&#x0A;+Answer: BlxmOdr1Ex&#x0A;+\n&#x0A;" type=""><![CDATA[test/unittest.cpp:132
+    <testcase name="MutatorsAndAccessors" status="run" time="0.001" classname="Quiz" />
+    <testcase name="CreateQuestion" status="run" time="0" classname="Quiz" />
+    <testcase name="SaveQuestion" status="run" time="0.001" classname="Quiz">
+      <failure message="test/unittest.cpp:70&#x0A;      Expected: output&#x0A;      Which is: &quot;File saved successfully!\n&quot;&#x0A;To be equal to: &quot;File saved successfully!\n\n&quot;&#x0A;With diff:&#x0A;@@ -1,1 +1,2 @@&#x0A;-File saved successfully!\n&#x0A;+File saved successfully!&#x0A;+\n&#x0A;" type=""><![CDATA[test/unittest.cpp:70
       Expected: output
-      Which is: "Question and Answer list\n1. qnErBvdfaN\nAnswer: JxOvbr292B\n2. g1DuPauaIo\nAnswer: BlxmOdr1Ex\n"
-To be equal to: expected
-      Which is: "Question and Answer list\n1. qnErBvdfaN\nAnswer: JxOvbr292B\n2. g1DuPauaIo\nAnswer: BlxmOdr1Ex\n\n"
+      Which is: "File saved successfully!\n"
+To be equal to: "File saved successfully!\n\n"
 With diff:
-@@ -3,3 +3,4 @@
- Answer: JxOvbr292B
- 2. g1DuPauaIo
--Answer: BlxmOdr1Ex\n
-+Answer: BlxmOdr1Ex
+@@ -1,1 +1,2 @@
+-File saved successfully!\n
++File saved successfully!
 +\n
 ]]></failure>
     </testcase>
-    <testcase name="FiniteChoiceLoop" status="run" time="0.004" classname="Quiz" />
-    <testcase name="CreateQuestionChoice" status="run" time="0.004" classname="Quiz">
-      <failure message="test/unittest.cpp:154&#x0A;      Expected: main_output(&quot;quizgen&quot;, &quot;a\nX\nX\nd&quot;)&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nXX\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;To be equal to: expected&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;With diff:&#x0A;@@ -8,5 +8,5 @@&#x0A; Choice: &#x0A; Please enter your question: Please enter the answer: Question added!&#x0A;-XX&#x0A;+&#x0A; What would you like to do?&#x0A; a. Create a question&#x0A;&#x0A;   Input: a&#x0A;X&#x0A;X&#x0A;d" type=""><![CDATA[test/unittest.cpp:154
-      Expected: main_output("quizgen", "a\nX\nX\nd")
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nXX\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
-To be equal to: expected
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
+    <testcase name="SaveFileFormat" status="run" time="0" classname="Quiz">
+      <failure message="test/unittest.cpp:98&#x0A;      Expected: output&#x0A;      Which is: &quot;File saved successfully!\n&quot;&#x0A;To be equal to: &quot;File saved successfully!\n\n&quot;&#x0A;With diff:&#x0A;@@ -1,1 +1,2 @@&#x0A;-File saved successfully!\n&#x0A;+File saved successfully!&#x0A;+\n&#x0A;" type=""><![CDATA[test/unittest.cpp:98
+      Expected: output
+      Which is: "File saved successfully!\n"
+To be equal to: "File saved successfully!\n\n"
 With diff:
-@@ -8,5 +8,5 @@
- Choice: 
- Please enter your question: Please enter the answer: Question added!
--XX
-+
- What would you like to do?
- a. Create a question
-
-   Input: a
-X
-X
-d]]></failure>
+@@ -1,1 +1,2 @@
+-File saved successfully!\n
++File saved successfully!
++\n
+]]></failure>
     </testcase>
-    <testcase name="DisplayQuestionsChoice" status="run" time="0.004" classname="Quiz">
-      <failure message="test/unittest.cpp:170&#x0A;      Expected: main_output(&quot;quizgen&quot;, &quot;a\nX\nX\nb\nd&quot;)&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nXX\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: Question and Answer list\n1. X\nAnswer: X\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;To be equal to: expected&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nQuestion and Answer list\n1. X\nAnswer: X\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;With diff:&#x0A;@@ -8,5 +8,5 @@&#x0A; Choice: &#x0A; Please enter your question: Please enter the answer: Question added!&#x0A;-XX&#x0A;+&#x0A; What would you like to do?&#x0A; a. Create a question&#x0A;@@ -14,5 +14,6 @@&#x0A; c. Save questions&#x0A; d. Quit&#x0A;-Choice: Question and Answer list&#x0A;+Choice: &#x0A;+Question and Answer list&#x0A; 1. X&#x0A; Answer: X&#x0A;&#x0A;   Input: a&#x0A;X&#x0A;X&#x0A;b&#x0A;d" type=""><![CDATA[test/unittest.cpp:170
-      Expected: main_output("quizgen", "a\nX\nX\nb\nd")
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nXX\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: Question and Answer list\n1. X\nAnswer: X\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
+    <testcase name="DisplayQuestions" status="run" time="0.001" classname="Quiz">
+      <failure message="test/unittest.cpp:132&#x0A;      Expected: output&#x0A;      Which is: &quot;\nQuestion and Answer list\n1. LIYuRXK6Z4\nAnswer: CdtY6Xcqb1\n2. Sa8Cd8Oy2m\nAnswer: Apd8IObsFx\n3. zhwSh3RES0\nAnswer: meKaDgokkV\n4. 0nXwih4gBN\nAnswer: 3Wut8sHx4I\n5. mMZIy13vta\nAnswer: YXeqbVphhy\n6. tKcxP5vrjR\nAnswer: mvfeDyk7tx\n7. we6ZykicAW\nAnswer: kSXXh6xK5M\n8. TlTrpGVnt6\nAnswer: MWorJHEzK5\n&quot;&#x0A;To be equal to: expected&#x0A;      Which is: &quot;Question and Answer list\n1. LIYuRXK6Z4\nAnswer: CdtY6Xcqb1\n2. Sa8Cd8Oy2m\nAnswer: Apd8IObsFx\n3. zhwSh3RES0\nAnswer: meKaDgokkV\n4. 0nXwih4gBN\nAnswer: 3Wut8sHx4I\n5. mMZIy13vta\nAnswer: YXeqbVphhy\n6. tKcxP5vrjR\nAnswer: mvfeDyk7tx\n7. we6ZykicAW\nAnswer: kSXXh6xK5M\n8. TlTrpGVnt6\nAnswer: MWorJHEzK5\n\n&quot;&#x0A;With diff:&#x0A;@@ -1,3 @@&#x0A;-&#x0A; Question and Answer list&#x0A; 1. LIYuRXK6Z4&#x0A;@@ -16,3 +15,4 @@&#x0A; Answer: kSXXh6xK5M&#x0A; 8. TlTrpGVnt6&#x0A;-Answer: MWorJHEzK5\n&#x0A;+Answer: MWorJHEzK5&#x0A;+\n&#x0A;" type=""><![CDATA[test/unittest.cpp:132
+      Expected: output
+      Which is: "\nQuestion and Answer list\n1. LIYuRXK6Z4\nAnswer: CdtY6Xcqb1\n2. Sa8Cd8Oy2m\nAnswer: Apd8IObsFx\n3. zhwSh3RES0\nAnswer: meKaDgokkV\n4. 0nXwih4gBN\nAnswer: 3Wut8sHx4I\n5. mMZIy13vta\nAnswer: YXeqbVphhy\n6. tKcxP5vrjR\nAnswer: mvfeDyk7tx\n7. we6ZykicAW\nAnswer: kSXXh6xK5M\n8. TlTrpGVnt6\nAnswer: MWorJHEzK5\n"
 To be equal to: expected
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nQuestion and Answer list\n1. X\nAnswer: X\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
+      Which is: "Question and Answer list\n1. LIYuRXK6Z4\nAnswer: CdtY6Xcqb1\n2. Sa8Cd8Oy2m\nAnswer: Apd8IObsFx\n3. zhwSh3RES0\nAnswer: meKaDgokkV\n4. 0nXwih4gBN\nAnswer: 3Wut8sHx4I\n5. mMZIy13vta\nAnswer: YXeqbVphhy\n6. tKcxP5vrjR\nAnswer: mvfeDyk7tx\n7. we6ZykicAW\nAnswer: kSXXh6xK5M\n8. TlTrpGVnt6\nAnswer: MWorJHEzK5\n\n"
 With diff:
-@@ -8,5 +8,5 @@
- Choice: 
- Please enter your question: Please enter the answer: Question added!
--XX
-+
- What would you like to do?
- a. Create a question
-@@ -14,5 +14,6 @@
- c. Save questions
- d. Quit
--Choice: Question and Answer list
-+Choice: 
-+Question and Answer list
- 1. X
- Answer: X
-
-   Input: a
-X
-X
-b
-d]]></failure>
-    </testcase>
-    <testcase name="SaveQuestionsChoice" status="run" time="0.005" classname="Quiz">
-      <failure message="test/unittest.cpp:186&#x0A;      Expected: main_output(&quot;quizgen&quot;, input)&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use?File saved successfully!\n\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;To be equal to: expected&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use? File saved successfully!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;With diff:&#x0A;@@ -7,6 +7,5 @@&#x0A; d. Quit&#x0A; Choice: &#x0A;-What filename would you like to use?File saved successfully!&#x0A;-&#x0A;+What filename would you like to use? File saved successfully!&#x0A; &#x0A; What would you like to do?&#x0A;&#x0A;   Input: c&#x0A;gmaCg.txt&#x0A;d" type=""><![CDATA[test/unittest.cpp:186
-      Expected: main_output("quizgen", input)
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use?File saved successfully!\n\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
-To be equal to: expected
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use? File saved successfully!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
-With diff:
-@@ -7,6 +7,5 @@
- d. Quit
- Choice: 
--What filename would you like to use?File saved successfully!
+@@ -1,3 @@
 -
-+What filename would you like to use? File saved successfully!
- 
- What would you like to do?
-
-   Input: c
-gmaCg.txt
-d]]></failure>
+ Question and Answer list
+ 1. LIYuRXK6Z4
+@@ -16,3 +15,4 @@
+ Answer: kSXXh6xK5M
+ 8. TlTrpGVnt6
+-Answer: MWorJHEzK5\n
++Answer: MWorJHEzK5
++\n
+]]></failure>
     </testcase>
-    <testcase name="QuitChoice" status="run" time="0.006" classname="Quiz" />
-    <testcase name="InvalidOptionChoice" status="run" time="0.007" classname="Quiz" />
-    <testcase name="ChoiceLoopLowercase" status="run" time="0.003" classname="Quiz">
-      <failure message="test/unittest.cpp:256&#x0A;      Expected: main_output(&quot;quizgen&quot;, input)&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nqa\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nqa\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;To be equal to: expected&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;With diff:&#x0A;@@ -8,5 +8,5 @@&#x0A; Choice: &#x0A; Please enter your question: Please enter the answer: Question added!&#x0A;-qa&#x0A;+&#x0A; What would you like to do?&#x0A; a. Create a question&#x0A;@@ -16,5 +16,5 @@&#x0A; Choice: &#x0A; Please enter your question: Please enter the answer: Question added!&#x0A;-qa&#x0A;+&#x0A; What would you like to do?&#x0A; a. Create a question&#x0A;&#x0A;   Input: a\nq\na\na\nq\na\nd\n" type=""><![CDATA[test/unittest.cpp:256
-      Expected: main_output("quizgen", input)
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nqa\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\nqa\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
-To be equal to: expected
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nPlease enter your question: Please enter the answer: Question added!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
-With diff:
-@@ -8,5 +8,5 @@
- Choice: 
- Please enter your question: Please enter the answer: Question added!
--qa
-+
- What would you like to do?
- a. Create a question
-@@ -16,5 +16,5 @@
- Choice: 
- Please enter your question: Please enter the answer: Question added!
--qa
-+
- What would you like to do?
- a. Create a question
-
-   Input: a\nq\na\na\nq\na\nd\n]]></failure>
+    <testcase name="FiniteChoiceLoop" status="run" time="0.003" classname="Quiz" />
+    <testcase name="CreateQuestionChoice" status="run" time="0.004" classname="Quiz" />
+    <testcase name="DisplayQuestionsChoice" status="run" time="0.004" classname="Quiz" />
+    <testcase name="SaveQuestionsChoice" status="run" time="0.003" classname="Quiz" />
+    <testcase name="QuitChoice" status="run" time="0.01" classname="Quiz">
+      <failure message="test/unittest.cpp:197&#x0A;       timed out (&gt; 10000 microseconds). Check code for infinite loops" type=""><![CDATA[test/unittest.cpp:197
+       timed out (> 10000 microseconds). Check code for infinite loops]]></failure>
     </testcase>
-    <testcase name="ChoiceLoopUppercase" status="run" time="0.004" classname="Quiz">
-      <failure message="test/unittest.cpp:306&#x0A;      Expected: main_output(&quot;quizgen&quot;, input)&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: Question and Answer list\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use?File saved successfully!\n\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;To be equal to: expected&#x0A;      Which is: &quot;Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nQuestion and Answer list\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use? File saved successfully!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n&quot;&#x0A;With diff:&#x0A;@@ -6,5 +6,6 @@&#x0A; c. Save questions&#x0A; d. Quit&#x0A;-Choice: Question and Answer list&#x0A;+Choice: &#x0A;+Question and Answer list&#x0A; &#x0A; What would you like to do?&#x0A;@@ -14,6 +15,5 @@&#x0A; d. Quit&#x0A; Choice: &#x0A;-What filename would you like to use?File saved successfully!&#x0A;-&#x0A;+What filename would you like to use? File saved successfully!&#x0A; &#x0A; What would you like to do?&#x0A;&#x0A;   Input: B\nC\nbxIWu.txt&#x0A;D\n" type=""><![CDATA[test/unittest.cpp:306
-      Expected: main_output("quizgen", input)
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: Question and Answer list\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use?File saved successfully!\n\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
-To be equal to: expected
-      Which is: "Welcome to QuizMaker\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nQuestion and Answer list\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nWhat filename would you like to use? File saved successfully!\n\nWhat would you like to do?\na. Create a question\nb. Display questions\nc. Save questions\nd. Quit\nChoice: \nThank you for using QuizMaker!\n"
-With diff:
-@@ -6,5 +6,6 @@
- c. Save questions
- d. Quit
--Choice: Question and Answer list
-+Choice: 
-+Question and Answer list
- 
- What would you like to do?
-@@ -14,6 +15,5 @@
- d. Quit
- Choice: 
--What filename would you like to use?File saved successfully!
--
-+What filename would you like to use? File saved successfully!
- 
- What would you like to do?
-
-   Input: B\nC\nbxIWu.txt
-D\n]]></failure>
-    </testcase>
+    <testcase name="InvalidOptionChoice" status="run" time="0.003" classname="Quiz" />
+    <testcase name="ChoiceLoopLowercase" status="run" time="0.035" classname="Quiz" />
+    <testcase name="ChoiceLoopUppercase" status="run" time="0.007" classname="Quiz" />
   </testsuite>
 </testsuites>

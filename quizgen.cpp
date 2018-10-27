@@ -5,7 +5,6 @@
 using namespace std;
 
 int main() {
-  string filename;
   /* This will create an array of 100 question objects*/
   question q;
   question qArray[100];
@@ -13,13 +12,13 @@ int main() {
   the user inputs something other than a or b (capital letters too), they will
   be notified with an invalid message, but will then be asked again what option
   they would like to choose.*/
+  string filename;
   char choice;
   int size = 0;
   cout << "Welcome to QuizMaker\n";
 
   do {
-    cout << "\n"
-         << "What would you like to do?\n"
+    cout << "\nWhat would you like to do?\n"
          << "a. Create a question\n"
          << "b. Display questions\n"
          << "c. Save questions\n"
@@ -32,8 +31,8 @@ int main() {
     case 'A':
       cout << "\n";
       qArray[size] = create_question();
-      cout << qArray[size].text();
-      cout << qArray[size].answer();
+      // cout << qArray[size].text();
+      // cout << qArray[size].answer();
       size++;
       break;
     case 'b':
@@ -42,7 +41,7 @@ int main() {
       break;
     case 'c':
     case 'C':
-      cout << "\nWhat filename would you like to use?";
+      cout << "\nWhat filename would you like to use? ";
       getline(cin, filename);
       save_questions(qArray, size, filename);
       break;

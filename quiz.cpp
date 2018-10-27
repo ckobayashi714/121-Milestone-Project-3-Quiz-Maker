@@ -18,7 +18,7 @@ question create_question() {
   return q;
 }
 void display_questions(question qArray[], int size) {
-  cout << "Question and Answer list\n";
+  cout << "\nQuestion and Answer list\n";
   for (int i = 0; i < size; i++) {
     cout << i + 1 << ". " << (qArray + i)->text() << "\n"
          << "Answer: " << (qArray + i)->answer() << "\n";
@@ -28,12 +28,11 @@ void save_questions(question qArray[], int size, string filename) {
   ofstream outfile;
   outfile.open(filename);
   outfile << size << "\n";
-
   for (int i = 0; i < size; i++) {
     outfile << "[SQ]\n"
             << (qArray + i)->text() << "\n"
-            << (qArray + i)->answer() << "\n\n";
+            << (qArray + i)->answer() << "\n";
   }
   outfile.close();
-  cout << "File saved successfully!\n\n";
+  cout << "File saved successfully!\n";
 }

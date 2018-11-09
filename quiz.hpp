@@ -1,6 +1,8 @@
 // Filename: quiz.hpp
-#ifndef QUIZ_HPP
-#define QUIZ_HPP
+#pragma once
+
+// #ifndef QUIZ_HPP
+// #define QUIZ_HPP
 
 #include <fstream>
 #include <iostream>
@@ -25,4 +27,4 @@ void display_questions(question qArray[], int size);
 
 void save_questions(question qArray[], int size, string filename);
 
-#endif
+// #endif

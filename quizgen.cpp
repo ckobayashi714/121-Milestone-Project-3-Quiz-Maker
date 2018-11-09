@@ -15,10 +15,10 @@ int main() {
   string filename;
   char choice;
   int size = 0;
-  cout << "Welcome to QuizMaker\n";
+  cout << "Welcome to QuizMaker\n\n";
 
   do {
-    cout << "\nWhat would you like to do?\n"
+    cout << "What would you like to do?\n"
          << "a. Create a question\n"
          << "b. Display questions\n"
          << "c. Save questions\n"
@@ -26,10 +26,10 @@ int main() {
          << "Choice: ";
     cin >> choice;
     cin.ignore();
+    cout << endl;
     switch (choice) {
     case 'a':
     case 'A':
-      cout << "\n";
       qArray[size] = create_question();
       // cout << qArray[size].text();
       // cout << qArray[size].answer();
@@ -41,7 +41,7 @@ int main() {
       break;
     case 'c':
     case 'C':
-      cout << "\nWhat filename would you like to use? ";
+      cout << "What filename would you like to use? ";
       getline(cin, filename);
       save_questions(qArray, size, filename);
       break;
@@ -49,9 +49,9 @@ int main() {
     case 'D':
       break;
     default:
-      cout << "\nInvalid option\n";
+      cout << "Invalid option\n\n";
     }
   } while (choice != 'd' && choice != 'D');
-  cout << "\nThank you for using QuizMaker!\n";
+  cout << "Thank you for using QuizMaker!\n";
   return 0;
 }

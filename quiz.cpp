@@ -12,27 +12,33 @@ question create_question() {
   getline(cin, text);
   cout << "Please enter the answer: ";
   getline(cin, answer);
-  cout << "Question added!" << endl;
   q.set_text(text);
   q.set_answer(answer);
+  cout << "Question added!\n\n";
   return q;
 }
 void display_questions(question qArray[], int size) {
-  cout << "\nQuestion and Answer list\n";
+  cout << "Question and Answer list\n";
   for (int i = 0; i < size; i++) {
-    cout << i + 1 << ". " << (qArray + i)->text() << "\n"
+    cout << (i + 1) << ". " << (qArray + i)->text() << "\n"
          << "Answer: " << (qArray + i)->answer() << "\n";
+    // cout << (i + 1) << ". " << qArray[i].text() << "\n";
+    // cout << "Answer: " << qArray[i].answer() << "\n";
   }
+  cout << "\n";
 }
 void save_questions(question qArray[], int size, string filename) {
   ofstream outfile;
   outfile.open(filename);
   outfile << size << "\n";
   for (int i = 0; i < size; i++) {
-    outfile << "[SQ]\n"
-            << (qArray + i)->text() << "\n"
-            << (qArray + i)->answer() << "\n";
+    // outfile << "[SQ]\n";
+    //         << (qArray + i)->text() << "\n"
+    //         << (qArray + i)->answer() << "\n";
+    outfile << "[SQ]" << endl;
+    outfile << qArray[i].text() << endl;
+    outfile << qArray[i].answer() << endl;
   }
   outfile.close();
-  cout << "File saved successfully!\n";
+  cout << "File saved successfully!\n\n";
 }
